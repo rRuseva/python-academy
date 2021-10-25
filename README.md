@@ -1,2 +1,2 @@
 # python-academy
-Intro to python 
+Introduction to python programming ;) 
