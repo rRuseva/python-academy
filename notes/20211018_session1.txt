@@ -1,0 +1,44 @@
+
+Trayan repo:
+https://github.com/iproduct/intro-python
+
+********************************************
+USEFUL commands
+
+ls
+cat - calendar 
+cal
+date - current date 
+pwd current working dir
+
+more - list smth on pages 
+cd 
+man 'command ' - gives the options for the given command 
+wc 'file' - word count
+
+command1 | command2 - pipe = output of cmd1 is input date for cmd2 
+
+cmd1 > cmd2 - concanate 
+
+...
+bash = born again shell
+
+ln -s - create soft link  *** read more
+
+
+tar - archivates files:
+	-v  -prints all pfiles that are being processed
+
+
+become super user: 
+	sudo 
+	sudo su -
+
+stop being super user 
+	exit
+	ctrl + d
+
+
+TO DO:
+for VM diplay settings 
+

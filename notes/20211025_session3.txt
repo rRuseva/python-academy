@@ -1,0 +1,43 @@
+text editors: ne ;  tilde;
+echo "hello" > myfile.txt - writes hello to the file
+
+echo $PATH
+
+export PATH=$PATH:/home/radir
+-- adds new directory to pathvariable
+
+locate 
+
+
+*************** Permisions : ********************
+
+list users: 
+	cat /etc/paswd/
+	format: 
+	username: if password: user id: group id: home dir
+
+/etc/shadow/ - password in ecryptetypes (in hash)
+
+sudo id - shows user info
+
+sudo useradd "username" 
+
+sudo passwd "username"
+	new_passwd
+
+sudo usermode "user name" - edits the user 
+
+
+sudo groupadd -g 4001 firejumpers  -- created new group with id 4001 and name firejumpers 
+
+
+...  ads user to the group 
+
+sudo userdel/groupdel - deletes user/group 
+
+//change permissions 
+chmod 777 file
+
+
+**** 
+.bash_profile - for system user settings ???

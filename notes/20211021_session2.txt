@@ -1,0 +1,35 @@
+TO CHECK:
+HTP/3 
+Networking
+
+
+
+UDP (user datagram protocol) - for real time communication - low letancy; good feature - fast, but no guarantees in delivering all packages; more compact
+
+TCP - old, slower, but more reliable
+
+
+*multicast - something like conference call - one sender, multiple recievers 
+*broadcast - one sender, all recievers (like tv and radio)
+
+***************
+Classless Inter-Domain rooting
+
+
+TCP - transfer control protocol
+
+ports - 
+21 - ftp
+23 - tcp
+80 htp
+22  -- ssh
+
+web proxy - посредник; functions: cache, fire wall
+fire wall - it is proxy 
+
+
+excercise:
+
+10.0.2.15/24
+
+127.0.0.1/8
