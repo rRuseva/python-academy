@@ -28,34 +28,32 @@ def remove_by_index(l, idx):
 def find_winer(n, m):
 	players = list(range(1, n+1))
 	print(players)
-	curr = 0
+	curr = m % len(players) - 1 
+	players.pop(curr)
 
 	while(len(players)>1):
-		curr += m 
+		# print(players)
+		# print("curr1: ", curr)
+		curr += (m-1)
+		if curr >= (len(players)):
+			curr = curr % len(players)
 
-		if curr >= len(players):
-			print("c:", curr)
-			curr = curr % m
-		# print(curr)
-		# print(players[curr-1])
-		i = players.pop(curr-1)
-		print("p:", i)
-		print("i", curr)
-		print(players)
-		curr -= 1
-		# print(len(players))
+		# curr -= 1
+		# print("curr2: ", curr)
+		p = players.pop(curr)
+		print("p: ", p)
 
-	
 	return players[0]
 
 if __name__ ==  "__main__":
 
-	# n = int(input("Please, enter people count: "))
-	# m = int(input("Please, enter the counting number: "))
+	n = int(input("Please, enter people count: "))
+	m = int(input("Please, enter the counting number: "))
 
 	# (n, m) = (10, 4)
+	# (n, m) = (6, 8)
 	# (n, m) = (8, 3)
-	(n, m) = (11, 5)
+	# (n, m) = (11, 5)
 	p = find_winer(n,m)
-	print("Thewinner is: ", p)
+	print("The winner is: ", p)
 	print() 
