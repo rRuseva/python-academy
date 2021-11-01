@@ -1,0 +1,19 @@
+Python basics:
+
+sum_1 += int(ch) if ch != '.' else 0 # if ch is ., adds to the sum 0
+
+
+********* data structers: 
+
+tuples cannot be changed. they are imutable.
+
+list are mutable
+slicing:
+a = [1,5,6,7,3,5]
+b = a[:2]  /returns last two elements
+pop function - removes an element from list by given index; it changes the original list; 
+
+frozen set is imutable; 
+
+dictionaries:
+... for nest session ;D
