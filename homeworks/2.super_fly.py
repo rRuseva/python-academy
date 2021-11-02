@@ -21,7 +21,9 @@ def distances(d, v, v1, v2, e):
         return -1
 
     distances = []
+    dtimes = []
     dt = delta_time(d, v, v2)
+    dtimes.append(dt)
     sf = path(v,dt)
     i = 1
     while (d) >= e:
@@ -32,9 +34,10 @@ def distances(d, v, v1, v2, e):
         else:
             dt = delta_time(d, v, v1)
         i += 1
+        dtimes.append(dt)
         sf = path(v,dt)
 
-    return distances
+    return distances, dtimes
 
 
 
@@ -52,11 +55,18 @@ if __name__ == '__main__':
     v2 = 20
     e = 0.000001
 
-    fly_distances = distances(d, v, v1, v2, e)
+    fly_distances, fly_times = distances(d, v, v1, v2, e)
 
     total_distance = 0
-    for i, dist in enumerate(fly_distances):
+    header = "{:>3}: {:^26} - {:^26}".format("#", "distance", "delta time")
+    print(header)
+    # for i, dist, time in enumerate(fly_distances):
+    for i in range(len(fly_distances)):
+        dist = fly_distances[i]
+        time = fly_times[i]
         total_distance += dist
-        print(f"{i}: {dist:>23.23f}")
-
-    print("Total distance: {}".format(total_distance))
+        print("{:>3}: {:>26.23f} - {:>26.23f}".format(i, dist, time))
+    l = len(header)
+    total_distance_str ="Total distance: {}".format(total_distance)
+    offset = (l - len(total_distance_str))
+    print(" "*offset + total_distance_str )
