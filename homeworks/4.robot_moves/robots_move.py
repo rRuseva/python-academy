@@ -1,4 +1,5 @@
 import sys
+import copy
 
 def read_input(input_file):
     t = 0
@@ -25,48 +26,95 @@ def read_input(input_file):
 def print_desk(desk):
     for line in desk:
         # print("|", " | ".join(line),"|")
-        print("  ".join(line))
+        print(" ".join(str(x) for x in line))
     print()
 
-def make_move(x,y, desk):
-    direction = desk[y][x]
-    n,m = len(desk)-1, len(desk[0])-1
-    nx, ny = x, y
-    if direction == 'L': nx = x-1
-    elif direction == 'R': nx =  x+1
-    elif direction == 'U': ny = y-1
-    elif direction == 'D': ny = y+1
+def make_move(r,c, desk, n, m):
+    direction = desk[r][c]
+    # print('direction ', direction)
+    nr, nc, = r,c
+    if direction == 'L': nc = c-1
+    elif direction == 'R': nc =  c+1
+    elif direction == 'U': nr = r-1
+    elif direction == 'D': nr = r+1
 
-    if (nx <= 0 or nx > m) and (ny < 0 and ny > n):
-        return -1, -1
-    if desk[ny][nx] == '1':
-        return -1, -1
+    if (nr <0 or nr > n-1) or (nc < 0 or nc > m-1):
+        return (-1, -1)
+    if desk[nr][nc] == '1':
+        return (-1, -1)
+    return nr, nc
 
-    return nx, ny
-
-def find_path(x,y,desk):
-    n,m = len(desk)-1, len(desk[0])-1
+def find_path(row,col, desk, n, m):
     path_len = 0
-    i, j = y,x
-    while (i > 0 or i <= m) and (j > 0 or j <= n):
-        nx, ny = make_move(j, i, desk)
-        if (nx, ny) == (-1,-1):
-            path_len += 1
-            print("Game over")
+    i, j = row, col
+    while is_valid_pos(i,j, n, m):
+        new_row, new_col = make_move(i, j, desk, n, m)
+        if (new_row, new_col) == (-1,-1):
+            path_len +=1
             break
         else:
             desk[i][j] = '1'
-            path_len += 1
-            j, i = nx, ny
-            print_desk(desk)
-            # break
-
-
-    print(path_len)
+            path_len +=1
+            i, j = new_row, new_col
     return path_len
 
-if __name__ == '__main__':
+def is_valid_pos(i,j,n,m):
+    if (i >= 0 and i < n) and (j >= 0 and j < m):
+        return True
+    else:
+        return False
 
+
+def find_longest_path(desk, n, m):
+    results = []
+    i, j = 0, 0
+    path_len = 0
+    max_path = 0
+    ### found_paths: [[0]]  nxm
+    found_paths = [[0]*m]*n
+    # while is_valid_pos(i,j,n,m):
+    #     desk_copy = copy.deepcopy(desk)
+    #
+    #     path = find_path(i,j,desk_copy, n,m, found_paths)
+    #     if path >= max_path:
+    #         max_path = path
+    #         results.append((i,j, path))
+    #
+    #     i+=1
+    #     j += 1
+    for i in range(n):
+        for j in range(m):
+            desk_copy = copy.deepcopy(desk)
+            path_len = find_path(i, j, desk_copy, n ,m)
+            if path_len > max_path:
+                max_path = path_len
+                # found_paths[i][j] = path_len
+                if results:
+                    res_len = len(results)
+                    k = 0
+                    while abs(k) <= len(results):
+                        if results[k][2] < path_len:
+                            p = results.pop()
+                        k -= 1
+                results.append((i,j, path_len))
+            elif path_len == max_path:
+                results.append((i,j, path_len))
+
+    # print_desk(found_paths)
+    return [(i+1, j+1, p) for (i,j,p) in results], found_paths
+
+def run_all_test(desks):
+    t = len(desks)
+    for k, d in enumerate(desks):
+        print(f"Test# {k+1:<5}")
+        print_desk(d)
+        r, fp = find_longest_path(d, len(d), len(d[0]))
+        # find_longest_path(d, len(d), len(d[0]))
+        print(r)
+        print_desk(fp)
+        print("*"*25)
+
+if __name__ == '__main__':
     if len(sys.argv) > 2:
         input_file = sys.argv[1]
     else:
@@ -74,7 +122,29 @@ if __name__ == '__main__':
         # input_file = input("Please, give me a file: ")
         input_file = "input1.txt"
 
-    desks = read_input(input_file)
-    print_desk(desks[-3])
-    # find_path(0,0,desks[-1])
-    find_path(2,1,desks[-3])
+    # desks = read_input(input_file)
+    desks = [ [['R']],
+    [['R', 'R', 'L']],
+    [['D', 'L'], ['R', 'U']],
+    [['U', 'D'], ['R', 'U']],
+    [['D', 'L'], ['U', 'L'], ['R', 'U']],
+    [['R', 'R', 'R', 'D'], ['R', 'U', 'U', 'D'], ['U', 'R', 'U', 'D'], ['U', 'L', 'L', 'R']],
+    [['D', 'D', 'L', 'U'], ['R', 'D', 'D', 'U'], ['U', 'U', 'U', 'U'], ['R', 'D', 'L', 'D']] ]
+    idx = 4
+    n, m = len(desks[idx]), len(desks[idx][0])
+    # print(n,m)
+    print_desk(desks[idx])
+    # print(find_path(0,0,copy.deepcopy(desks[idx]), n, m))
+    #
+    # print(find_path(2,0,copy.deepcopy(desks[idx]), n, m))
+    # print_desk(desks[idx])
+
+
+    # desk_c = copy.deepcopy(desks[idx])
+    # r, fp= find_longest_path(desk_c,n,m)
+    # # print(find_longest_path(desk_c,n,m)
+    # print(r)
+    # print_desk(fp)
+
+    run_all_test(desks)
+
