@@ -66,7 +66,7 @@ if __name__ == '__main__':
     else:
         # print("Error: No such file!")
         # input_file = input("Please, give me a file: ")
-        input_file = "input2.txt"
+        input_file = "input1.txt"
 
     tests = load_data_file(input_file)
     # print_desk(tests[0])

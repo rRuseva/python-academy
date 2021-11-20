@@ -26,20 +26,15 @@ def map_ints(i,list):
     return list[i-1]
 
 def find_max_num(n, a, int_maps):
-    # print((a), type(a))
-    # print((int_maps), type(int_maps))
-    subseq_len = 0
     max_num = []
-    i = 0
     for i, digit in enumerate(a):
-        # digit = a[i]
-        # new_a = map_ints(digit, int_maps)
         new_a = int_maps[digit-1]
-        if new_a <= digit:
-            max_num.append(digit)
-        else:
+        if new_a >= digit:
             max_num.append(new_a)
-            subseq_len += 1
+        else:
+            max_num += (a[i:])
+            break
+
 
     return max_num
 
