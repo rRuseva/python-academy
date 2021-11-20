@@ -130,3 +130,6 @@ dmypy.json
 
 */.idea/*
 .idea/*.xml
+*.7z
+*.mp4
+*.idea
