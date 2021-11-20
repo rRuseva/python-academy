@@ -32,24 +32,25 @@ def find_word_counts(words, text):
             total_occurrences += count
 
     words_dict = sorted(words_dict.items(), key=operator.itemgetter(1), reverse=True)
+
     result_dict = dict()
     for w in words_dict:
         result_dict[w[0]] = (w[1], w[1]*100/total_occurrences)
-
-    return result_dict
+    # result_dict = sort_dict(words_dict, total_occurrences)
+    return result_dict, total_occurrences
 
 def sort_dict(words, total_count):
-    sorted_dict = sorted(words.items(), key=operator.itemgetter(1))
+    sorted_dict = sorted(words.items(), key=operator.itemgetter(1), reverse=True)
     result_diict = dict()
     for  w in sorted_dict:
-        # result_diict[w[0]] = (w[1], find_percentage(w[1], total_count))
         result_diict[w[0]] = (w[1], w[1]*100/total_count)
     return result_diict
 
-def print_result(words_count):
-    print(len(words_count))
+def print_result(words_count, total_count):
+    print(total_count)
     for k, v in words_count.items():
         print(f"{k}: {v[0]}, {v[1]:<3.2f}%")
+    print("-"*10)
 
 if __name__ == '__main__':
     input_file = ''
@@ -58,9 +59,16 @@ if __name__ == '__main__':
     else:
         print("Error: No such file!")
         while input_file == "": # and input_file != None:
-            input_file = input("Please, give me an exciting file: ")
+            input_file = input("Please, give me a file name: ")
+        # input_file = "input2.txt"
 
     (word, text) = load_input(input_file)
-    result = find_word_counts(word_permutations(word), text)
+    result, total_count = find_word_counts(word_permutations(word), text)
 
-    print_result(result)
+    # print(len(text))
+    print_result(result, total_count)
+
+    # t ='аbrаcАdаbRАаcАdcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаcАdаR'* 30000
+    # # print(len(t))
+    # result, total_count = find_word_counts(word_permutations(word), t)
+    # print_result(result, total_count)
