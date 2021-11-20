@@ -32,10 +32,10 @@ def edit_book_action():
     book = books[id-1]
     print_book(book)
     for i, property in enumerate(book.keys()):
-        print(f"{i+1:^1d}) {str(property)}")
-    prop = (input("Choose a property for editing "))
+        print(f"{i:^1d}) {str(property)}") if i > 0 else ""
+    prop = (input("Choose a property for editing: ex: title ")).strip()
 
-    value = (input("Enter the new value: "))
+    value = (input("Enter the new value: ")).strip()
 
     try:
         book[prop] = value
