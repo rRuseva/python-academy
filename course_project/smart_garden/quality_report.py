@@ -1,10 +1,12 @@
-class QualityReport:
+import datetime
 
-    def __init__(self, date_time, author, plant_charecterization):
+class QualityReport:
+    """Template for evaluation of plant progress"""
+    def __init__(self, date_time, author, plant_characterization):
         self.id = None
-        self.date_time = date_time
+        self.date_time = datetime.datetime.now()
         self.author = author
-        self.plant_charecterization = plant_charecterization
+        self.plant_characterizations = plant_characterization
 
     def __repr__(self):
         pass

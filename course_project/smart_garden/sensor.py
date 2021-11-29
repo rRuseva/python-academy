@@ -1,14 +1,14 @@
 class Sensor:
-
-    def __init__(self, name, type, data, time_intervals):
-        self.id = None
+    """ Sensor model class"""
+    def __init__(self,id, name, data = [], notes = []):
+        self.id = id
         self.name = name
-        self.type = type
         self.data = data
-        self.time_intervals = time_intervals
 
     def __repr__(self):
-        pass
+        return f"Sensor {self.id} {self.name} | " \
+               f"data: {self.data}\n"
 
     def __str__(self):
-        pass
+        return f"Sensor {self.id} {self.name} | " \
+               f"data: {self.data}\n"

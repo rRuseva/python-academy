@@ -1,18 +1,30 @@
-class Garden:
+import datetime
 
-    def __init__(self, name, type, dimensions, location, status, date_created, pots = [] ):
+class Garden:
+    """A garden model class:
+    a single garden may have more than one pot """
+    def __init__(self, name, status, pots = [],  dimensions = [], location = []):
         self.id = None
         self.name = name
-        self.type = type
-
-        ### the needed conditions for the pot
-        self.humidity = humidity
-        self.soil_moisture = soil_moisture
-        self.temperature = temperature
-        self.light_levels = light_levels
+        self.status = status
+        self.date_crated = datetime.datetime.now()
+        self.pots = pots
+        self.dimensions = dimensions
+        self.location = location
 
     def __repr__(self):
-        pass
+        return f"Garden         : {self.id:<5d} - {self.name} \n" \
+               f"status         : {self.status}\n" \
+               f"date created   : {self.date_crated} \n" \
+               f"pots           : {self.pots}\n" \
+               f"size           : {self.dimensions[0]}x{self.dimensions[1]} meters \n" \
+               f"location       : {self.location}"
+
 
     def __str__(self):
-        pass
+        return f"Garden         : {self.id} - {self.name} \n" \
+               f"status         : {self.status}\n" \
+               f"date created   : {self.date_crated} \n" \
+               f"pots           : \n{self.pots}\n" \
+               f"size           : {self.dimensions[0]}x{self.dimensions[1]} meters \n" \
+               f"location       : {self.location}"
