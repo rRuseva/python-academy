@@ -28,3 +28,4 @@ class Garden:
                f"pots           : \n{self.pots}\n" \
                f"size           : {self.dimensions[0]}x{self.dimensions[1]} meters \n" \
                f"location       : {self.location}"
+

@@ -1,10 +1,17 @@
 import json
+from dataclasses import asdict
+
 import serial
 import datetime
 import time
 import config
 import os.path
-# pot_data = []
+from sensor import SensorEntry, Sensor
+from pot import Pot
+from garden import Garden
+from plant import Plant
+
+# import Sensor # populate date directly int the classes !!!
 
 """Reading sensor information from one pot
     and saves it to JSON file with the name "pot_{pot_id}.json
@@ -16,7 +23,7 @@ import os.path
             "sensor_name":value
         }
 """
-def raed_sensor_data( entry_counts = 3):
+def raed_sensor_data(pot, max_entry_counts = 3):
     pot_data = []
     try:
         # ser = serial.Serial('COM4', 9800, timeout=1)
@@ -27,26 +34,26 @@ def raed_sensor_data( entry_counts = 3):
         )
         time.sleep(2)
         print(f"Serial connection to {config.SERAIL_PORT} is opened. ")
-        entry_id = 0
-        pot_id = -1
+
+        sensor_count = pot.get_sensors_count()
+
+        entry_count = 0
 
         while(ser.isOpen()):
             ct = datetime.datetime.now()
-            line = ser.readline()
-            sensors_data = {}
-            if line:
-                entry_id += 1
-                s_data = line.decode("utf-8")  # decode arduino data to utf-8 string
-                s_data = s_data.strip().split(", ")
-                print(s_data)
-                pot_id = s_data[0].split(":")[1].strip()
-                for data in s_data [1:]:
-                    data = data.split(':')
-                    sensors_data[data[0]] = data[1]
-                # print([pot_id, entry_id, ct, sensors_data])
-            pot_data.append(format_data([pot_id, entry_id, ct.__str__(), sensors_data]))
 
-            if entry_id == entry_counts:
+            for i in range(sensor_count):
+                line = ser.readline()
+                if line:
+                    s_data = line.decode("utf-8")  # decode arduino data to utf-8 string
+                    s_data = s_data.strip().split(": ")
+                    print(s_data)
+                    se = SensorEntry(s_data[1])
+                    pot.sensors[i].update_sensor_data(se)
+
+            entry_count += 1
+
+            if entry_count == max_entry_counts:
                 ser.close()
                 print("Serial connection closed!")
 
@@ -75,13 +82,25 @@ def save_data_to_json(pot_data,filename, write_mode ):
     print(f"Data saved to {filename}")
 
 if __name__ == '__main__':
-    pot_data = raed_sensor_data(5)
+    herbs = Plant("Herbs", 40,50, 22, 6, "")
+    cherry_tomato = Plant("Cherry Tomatoes", 50, 70, 21, 8, "")
 
-    if pot_data:
-        pot_id = pot_data[0]["pot_id"]
-        filename = os.path.join(config.DATA_PATH, "pot_" + str(pot_id) + ".json")
-        if os.path.exists(filename):
-            write_mode = 'a'
-        else:
-            write_mode = 'w'
-        save_data_to_json(pot_data, filename, write_mode)
+    herbs_pot = Pot("Herbs Pot", herbs, [Sensor("Soil Moisture"), Sensor("Light intensity")])
+    cherry_tomato_pot = Pot("Cherry tomatoes", cherry_tomato,[Sensor("Soil Moisture"), Sensor("Light intensity")])
+
+    my_garden = Garden("Home garden", "New", [herbs_pot, cherry_tomato_pot], (0.2, 0.2), "home" )
+
+
+    raed_sensor_data(herbs_pot, 2)
+    print(herbs_pot.sensors)
+    print("--------------------")
+    print(asdict(herbs_pot))
+    filename = os.path.join(config.DATA_PATH, "pot_" + str(herbs_pot.pot_id)[:5] + ".json")
+    if os.path.exists(filename):
+        write_mode = 'a'
+    else:
+        write_mode = 'w'
+
+    herbs_pot.save_to_file(filename,write_mode)
+    # for s in range(herbs_pot.get_sensors_count()):
+    #     herbs_pot.sensors[s].persist(filename, write_mode)
