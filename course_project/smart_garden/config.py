@@ -9,3 +9,5 @@ SERAIL_WRITE_TIMEOUT = 1
 import os
 ROOT_DIR = os.path.abspath(os.curdir)
 DATA_PATH = os.path.join(ROOT_DIR, 'data')
+
+ENCODING = 'UTF-8'

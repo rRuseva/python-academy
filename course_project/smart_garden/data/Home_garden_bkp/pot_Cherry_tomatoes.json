@@ -1,0 +1,75 @@
+{
+    "pot_id": "3766280c-d612-40ce-9756-9b4b0adbf34e",
+    "pot_name": "Cherry tomatoes",
+    "plant": {},
+    "location": null,
+    "notes": null,
+    "measurements": [
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "b5766adb-8e5d-4f1f-9b0d-625042ca0073",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1001,
+                    "value": "15",
+                    "timestamp": "05/12/2021 18:56:39"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "ed1b9289-d8c7-439b-8fc0-b40a559cc00b",
+                "data_units": "",
+                "entry": {
+                    "entry_id": 2001,
+                    "value": "6",
+                    "timestamp": "05/12/2021 18:56:39"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "b5766adb-8e5d-4f1f-9b0d-625042ca0073",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1002,
+                    "value": "495",
+                    "timestamp": "05/12/2021 18:56:39"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "ed1b9289-d8c7-439b-8fc0-b40a559cc00b",
+                "data_units": "",
+                "entry": {
+                    "entry_id": 2002,
+                    "value": "6",
+                    "timestamp": "05/12/2021 18:56:39"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "b5766adb-8e5d-4f1f-9b0d-625042ca0073",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1003,
+                    "value": "537",
+                    "timestamp": "05/12/2021 18:56:39"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "ed1b9289-d8c7-439b-8fc0-b40a559cc00b",
+                "data_units": "",
+                "entry": {
+                    "entry_id": 2003,
+                    "value": "17",
+                    "timestamp": "05/12/2021 18:56:39"
+                }
+            }
+        ]
+    ]
+}

@@ -35,8 +35,8 @@ class Plant:
                f"air temperature - {self.temperature} C | " \
                f"sun light per day - {self.light_levels} h;"
 
-    def print_as_dict(self):
-        print(asdict(self))
+    def plant_as_dict(self):
+        return(asdict(self))
 
     def get_conditions(self):
         return {
@@ -50,4 +50,18 @@ class Plant:
         return {
             "height" : self.height,
             "leaves_density": self.leaves_density,
+        }
+
+    # def get_plant_data(self):
+    def __dict__(self):
+        return {
+            "id" : self.id,
+            "name" : self.name,
+            "humidity" : self.humidity,
+            "soil_moisture" : self.soil_moisture,
+            "temperature" : self.temperature,
+            "light_levels" : self.light_levels,
+            "height" : self.height,
+            "leaves_density" : self.leaves_density,
+            "notes" : self.notes,
         }
