@@ -1,0 +1,17 @@
+{
+    "id": "32bd4f172c314b5faea590fb2e2b2979",
+    "name": "Home garden",
+    "status": "new",
+    "date_created": "05/12/2021 19:23:43",
+    "pots": [
+        {
+            "pot_id": "312d8ab6-5f72-4e79-a2ea-d6a2c47e132d",
+            "pot_name": "Cherry tomatoes",
+            "plant": {},
+            "location": null,
+            "notes": null
+        }
+    ],
+    "dimensions": [],
+    "location": []
+}

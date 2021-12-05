@@ -11,9 +11,12 @@ from model.garden import Garden
 from model.plant import Plant
 
 class GardenRepository:
-    def __init__(self, garden):
+    def __init__(self, garden = None, garden_path = ""):
         self.garden = garden
-        self.garden_path = os.path.join(config.DATA_PATH, generate_filename(self.garden.name) )
+        if self.garden is not None:
+            self.garden_path = os.path.join(config.DATA_PATH, generate_filename(self.garden.name) )
+        else:
+            self.garden_path = garden_path
 
     def pots_count(self):
         return len(self.garden.pots)
@@ -59,14 +62,21 @@ class GardenRepository:
         save_to_file(file_data, filename, 'w', encoding=config.ENCODING)
 
     def load_pot_data_from_file(self, filename, pot):
+        print(pot)
         data = load_from_file(filename)
+        print("pot data from file")
+        print(data)
         pot = Pot(data["pot_name"])
         pot.update_pot_from_dict(data)
         return pot
 
     def load_garden_data_from_file(self,filename):
         garden_data = load_from_file(filename)
+        print("garden data from file")
+        print(garden_data)
+        self.garden = Garden(garden_data["name"])
         new_pots = []
+
         for pot_info in garden_data['pots']:
             filename = os.path.join(self.garden_path, generate_pot_filename(pot_info["pot_name"]))
             pot = Pot(pot_info["pot_name"])

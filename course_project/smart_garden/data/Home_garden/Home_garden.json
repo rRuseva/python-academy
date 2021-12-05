@@ -1,15 +1,16 @@
 {
-    "id": "bd1f6936c127484ba4be41292cebbb59",
+    "id": "68b9ea84af7f40a48538d9a7d15ad05e",
     "name": "Home garden",
     "status": "new",
-    "date_created": "05/12/2021 19:12:18",
+    "date_created": "05/12/2021 18:56:39",
     "pots": [
         {
-            "pot_id": "366d4b1d-efc1-461b-975e-c7c03c36536b",
-            "pot_name": "Cherry tomatoes",
-            "plant": {},
-            "location": null,
-            "notes": null
+            "pot_id": "1dd9b9cf-3429-4ac0-8a6c-d9916f40bf22",
+            "pot_name": "Herbs Pot"
+        },
+        {
+            "pot_id": "3766280c-d612-40ce-9756-9b4b0adbf34e",
+            "pot_name": "Cherry tomatoes"
         }
     ],
     "dimensions": [],
