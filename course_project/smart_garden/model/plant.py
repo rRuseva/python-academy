@@ -3,6 +3,7 @@ from typing import List
 from typing import List, Union
 import uuid
 
+#
 @dataclass
 class Plant:
     """Plant model cass
@@ -23,13 +24,14 @@ class Plant:
     id : Union[uuid.UUID, None] = field(default_factory=uuid.uuid4)
 
     def __repr__(self):
-        return f"{str(self.id):>5.5s}_{self.name} needs of {self.humidity} percentages of humidity, " \
+        return f"id: {str(self.id):>5s} - {self.name} needs of " \
+               f"{self.humidity} percentages of humidity, " \
                f"{self.soil_moisture} percentages of soil moisture, " \
                f"average temperature of {self.temperature} Celsius, and " \
-               f"average {self.light_levels} hours per day"
+               f"average {self.light_levels} hours per day \n"
 
     def __str__(self):
-        return f"{str(self.id):>5.5s}_{self.name} needs of: " \
+        return f"{str(self.id):>3s}_{self.name} needs of " \
                f"air humidity - {self.humidity} % | "\
                f"soil moisture - {self.soil_moisture} % | " \
                f"air temperature - {self.temperature} C | " \

@@ -9,6 +9,7 @@ import os.path
 from tkinter import *
 from dao.garden_repo import GardenRepository
 from view.app_main_window import AppMainWindow
+from view.application import Application
 
 if __name__ == '__main1__':
     pass
@@ -58,7 +59,12 @@ if __name__ == '__main__':
     filename = os.path.join(dirname, "Home_garden.json")
 
     garden_repo = GardenRepository(garden_path=dirname)
+    #
+    #
+    # garden_repo.load_garden_data_from_file(filename)
 
+    # print("My 'Home Garden'")
+    # print(garden_repo.garden.__repr__())
 
-
-    garden_repo.load_garden_data_from_file(filename)
+    app = Application(garden_repo, filename)
+    app.start()

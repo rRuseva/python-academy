@@ -3,7 +3,8 @@ import json
 from dataclasses import dataclass, field, asdict
 from typing import List
 from model.plant import Plant
-from model.sensor import Sensor
+# from model.quality_report import QualityReport
+from model.sensor import Sensor, SensorEntry
 from typing import List, Union
 import uuid
 
@@ -17,17 +18,16 @@ class Pot:
     pot_id  : Union[uuid.UUID, None] = field(default_factory=uuid.uuid4)
 
     def __repr__(self):
-        return f"pot_id: {str(self.pot_id):>5.5s} " \
-               f"pot_name: {self.name} | " \
-               f"plant: {self.plant} \n| " \
-               f"sensors: {self.sensors} \n| " \
-               f"location {self.location}\n| " \
-               f"additional notes: {self.notes};\n"
+        return f"\npot: {str(self.pot_id):>5.5s}_{self.name} \n " \
+               f"plant: {self.plant} \n " \
+               f"sensors: \n{[s for s in self.sensors]} \n " \
+               f"location {self.location} \n " \
+               f"additional notes: {self.notes};"
 
     def __str__(self):
-        return f"pot {str(self.pot_id):>5.5s} - {self.name} | " \
-               f"plant: {self.plant} \n| " \
-               f"sensors: {self.sensors} \n| " \
+        return f"pot {str(self.pot_id):>5.5s} - {self.name} |\n" \
+               f"plant: {self.plant.__repr__()} |\n " \
+               f"sensors: {[s for s in self.sensors]} | \n" \
                f"location {self.location}\n| " \
                f"additional notes: {self.notes};\n"
 
@@ -64,7 +64,7 @@ class Pot:
     def update_pot_from_dict(self,dict_data):
         self.pot_id = dict_data["pot_id"]
         self.name = dict_data["pot_name"]
-        self.plant = dict_data["plant"]
+        self.plant = Plant(**dict_data["plant"])
         self.location = dict_data["location"]
         self.notes = dict_data["notes"]
         self.sensors = self.unzip_pot_measurements(dict_data["measurements"])
@@ -74,15 +74,14 @@ class Pot:
         list_sensors = []
         for sdata in sensors:
             sens_measurements = []
-            # print("*", sdata)
+            sensor = Sensor()
+            sensor.name=sdata[0]['sensor_name']
+            sensor.sensor_id = sdata[0]['sensor_id']
+            sensor.data_units = sdata[0]['data_units']
             for mes in sdata:
-                sensor = {
-                    'sensor_name': mes['sensor_name'],
-                    'sensor_id': mes['sensor_id'],
-                    'data_units': mes['data_units']
-                }
-                sens_measurements.append(mes['entry'])
-            sensor["sensor_data"] = sens_measurements
+                se = SensorEntry(mes['entry']['entry_id'], mes['entry']['value'], mes['entry']['timestamp'])
+                sensor.update_sensor_data(se)
+            # sensor.sensor_data = sens_measurements
             list_sensors.append(sensor)
         return list_sensors
 

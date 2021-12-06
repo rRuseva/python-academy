@@ -1,4 +1,3 @@
-import json
 from dataclasses import dataclass, field, asdict, astuple
 from datetime import datetime
 import itertools
@@ -19,25 +18,20 @@ class SensorEntry:
                f"data: {self.value:>4}"
 
     def __str__(self):
-        return f"\n{str(self.entry_id):>5.5s} {self.timestamp} | " \
-               f"data: {self.value:>4}"
+        return f"\n{str(self.entry_id):>5.5s} | {self.timestamp} | " \
+               f"data: {self.value:>4}\n"
 
     def measurement_as_tuple(self):
         return astuple(self)
 
-    def measurement_as_dict(self):
+    def __dict__(self):
         return asdict(self)
 
-    # def update_measurement_from_dict(data_dict):
-    #     entry_id = data_dict["entry_id"]
-    #     value = data_dict["value"]
-    #     timestamp = data_dict["timestamp"]
-    #     return SensorEntry(entry_id,value,timestamp)
 
 @dataclass
 class Sensor:
     """Data model class for sensor"""
-    name: str
+    name: str = None
     data_units: str = "%"
     type: str = None
     notes: str = None
@@ -45,12 +39,12 @@ class Sensor:
     sensor_id : Union[uuid.UUID, None] = field(default_factory=uuid.uuid4)
 
     def __repr__(self):
-        return f"sensor_{str(self.sensor_id):>5.5s}-{self.name}: " \
-               f"\ndata: {self.sensor_data}\n"
+        return f"\nsensor_{str(self.sensor_id):>5.5s}_{self.name}: " \
+               f"\ndata: {self.sensor_data}"
 
     def __str__(self):
-        return f"sensor_{str(self.sensor_id):>5.5s}-{self.name}: " \
-               f"\ndata: {self.sensor_data}\n"
+        return f"\nsensor_{str(self.sensor_id):>5.5s}_{self.name}: " \
+               f"\ndata: {self.sensor_data}"
 
     def sensor_as_tuple(self):
         return astuple(self)

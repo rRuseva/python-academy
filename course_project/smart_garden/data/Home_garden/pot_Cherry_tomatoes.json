@@ -1,7 +1,14 @@
 {
     "pot_id": "3766280c-d612-40ce-9756-9b4b0adbf34e",
     "pot_name": "Cherry tomatoes",
-    "plant": {},
+    "plant": {
+        "id": 2,
+        "name": "Chery tomatoes",
+        "humidity": 50,
+        "soil_moisture": 60,
+        "temperature": 20,
+        "light_levels": 60
+    },
     "location": null,
     "notes": null,
     "measurements": [

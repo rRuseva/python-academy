@@ -1,7 +1,14 @@
 {
     "pot_id": "1dd9b9cf-3429-4ac0-8a6c-d9916f40bf22",
     "pot_name": "Herbs Pot",
-    "plant": {},
+    "plant": {
+        "id": 1,
+        "name": "Herbs",
+        "humidity": 40,
+        "soil_moisture": 50,
+        "temperature": 22,
+        "light_levels": 80
+    },
     "location": null,
     "notes": null,
     "measurements": [

@@ -62,25 +62,24 @@ class GardenRepository:
         save_to_file(file_data, filename, 'w', encoding=config.ENCODING)
 
     def load_pot_data_from_file(self, filename, pot):
-        print(pot)
+        # print(pot)
         data = load_from_file(filename)
-        print("pot data from file")
-        print(data)
-        pot = Pot(data["pot_name"])
+        # print("********** pot data")
+        # print(data)
+        # pot = Pot(data["pot_name"])
         pot.update_pot_from_dict(data)
-        return pot
+        # return pot
 
     def load_garden_data_from_file(self,filename):
         garden_data = load_from_file(filename)
-        print("garden data from file")
-        print(garden_data)
+        # print(garden_data)
         self.garden = Garden(garden_data["name"])
         new_pots = []
 
         for pot_info in garden_data['pots']:
             filename = os.path.join(self.garden_path, generate_pot_filename(pot_info["pot_name"]))
             pot = Pot(pot_info["pot_name"])
-            pot = self.load_pot_data_from_file(filename, pot_info)
+            self.load_pot_data_from_file(filename, pot)
             new_pots.append(pot)
         garden_data['pots'] = new_pots
         self.garden.update_garden_from_dict(garden_data)

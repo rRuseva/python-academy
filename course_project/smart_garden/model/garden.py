@@ -19,7 +19,7 @@ class Garden:
         return f"Garden         : {str(self.id)} - {self.name} \n" \
                f"status         : {self.status}\n" \
                f"date_created   : {self.date_created} \n" \
-               f"pots           : {[(p.name, str(p.pot_id)) for p in self.pots]}\n" \
+               f"pots           : \n{[p for p in self.pots]} \n" \
                f"dimensions     : {self.dimensions[0] if len(self.dimensions) != 0 else '0'}x{self.dimensions[1] if len(self.dimensions) != 0 else '0'} meters\n"\
                f"location       : {self.location}"
 
@@ -72,11 +72,8 @@ class Garden:
         self.name = dict_data["name"]
         self.status = dict_data["status"]
         self.date_created = dict_data["date_created"]
-        # print("gr*", dict_data["pots"])
         self.pots = dict_data["pots"]
         self.dimensions = dict_data["dimensions"]
         self.location = dict_data["location"]
 
-    def tmp(dict):
-        pot = Pot(**dict)
 

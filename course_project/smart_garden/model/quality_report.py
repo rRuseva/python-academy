@@ -1,15 +1,28 @@
-import datetime
+from dataclasses import dataclass, field, asdict, astuple
+from datetime import datetime
+from typing import List, Union
+from model.plant import Plant
+import uuid
 
+@dataclass
 class QualityReport:
     """Template for evaluation of plant progress"""
-    def __init__(self, date_time, author, plant_characterization):
-        self.id = None
-        self.date_time = datetime.datetime.now()
-        self.author = author
-        self.plant_characterizations = plant_characterization
+    plant_characterizations : dict = None # plant_characterization
+    author : str = None
+    id : Union[uuid.UUID, None] = field(default_factory=uuid.uuid4)
+    date_created : datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    pot_id: str = None
 
     def __repr__(self):
-        pass
+        return f"id_{self.id}_{self.timestamp}" \
+               f"date_created: {self.date_created}\n" \
+               f"author: {self.author} \n" \
+               f"plant_characterizations: {self.plant_characterizations}" \
+               f"pot: {self.pot_id}"
 
     def __str__(self):
-        pass
+        return f"id_{self.id}_{self.timestamp}" \
+               f"date_created: {self.date_created}\n" \
+               f"author: {self.author} \n" \
+               f"plant_characterizations: {self.plant_characterizations}" \
+               f"pot: {self.pot_id}"
