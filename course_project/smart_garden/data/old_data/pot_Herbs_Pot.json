@@ -1,80 +1,70 @@
 {
-    "pot_id": "1dd9b9cf-3429-4ac0-8a6c-d9916f40bf22",
+    "pot_id": "7af60691-ab02-4041-8b95-31b321bdacfb",
     "pot_name": "Herbs Pot",
-    "plant": {
-        "id": 1,
-        "name": "Herbs",
-        "humidity": 40,
-        "soil_moisture": 50,
-        "temperature": 22,
-        "light_levels": 80
-    },
-    "location": null,
-    "notes": null,
     "measurements": [
         [
             {
                 "sensor_name": "Soil Moisture",
-                "sensor_id": "768dc5a8-9f60-4b15-af08-836a4679e4d0",
+                "sensor_id": "9eb75f3a-1233-41a3-abd7-939794b3a180",
                 "data_units": "%",
                 "entry": {
                     "entry_id": 1001,
-                    "value": "130",
-                    "timestamp": "05/12/2021 18:58:20"
+                    "value": "5",
+                    "timestamp": "04/12/2021 18:48:04"
                 }
             },
             {
                 "sensor_name": "Light intensity",
-                "sensor_id": "22faf2ed-c430-4a28-9a7e-ec414186d105",
+                "sensor_id": "3f421d55-ff3a-4066-9ff6-eb81d2381cc8",
                 "data_units": "",
                 "entry": {
                     "entry_id": 2001,
-                    "value": "72",
-                    "timestamp": "05/12/2021 18:58:20"
+                    "value": "6",
+                    "timestamp": "04/12/2021 18:48:04"
                 }
             }
         ],
         [
             {
                 "sensor_name": "Soil Moisture",
-                "sensor_id": "768dc5a8-9f60-4b15-af08-836a4679e4d0",
+                "sensor_id": "9eb75f3a-1233-41a3-abd7-939794b3a180",
                 "data_units": "%",
                 "entry": {
                     "entry_id": 1002,
-                    "value": "616",
-                    "timestamp": "05/12/2021 18:58:20"
+                    "value": "5",
+                    "timestamp": "04/12/2021 18:48:04"
                 }
             },
             {
                 "sensor_name": "Light intensity",
-                "sensor_id": "22faf2ed-c430-4a28-9a7e-ec414186d105",
+                "sensor_id": "3f421d55-ff3a-4066-9ff6-eb81d2381cc8",
                 "data_units": "",
                 "entry": {
                     "entry_id": 2002,
-                    "value": "84",
-                    "timestamp": "05/12/2021 18:58:20"
+                    "value": "6",
+                    "timestamp": "04/12/2021 18:48:04"
                 }
             }
         ],
         [
             {
                 "sensor_name": "Soil Moisture",
-                "sensor_id": "768dc5a8-9f60-4b15-af08-836a4679e4d0",
+                "sensor_id": "9eb75f3a-1233-41a3-abd7-939794b3a180",
                 "data_units": "%",
                 "entry": {
                     "entry_id": 1003,
-                    "value": "637",
-                    "timestamp": "05/12/2021 18:58:20"
+                    "value": "6",
+                    "timestamp": "04/12/2021 18:48:04"
                 }
             },
             {
                 "sensor_name": "Light intensity",
-                "sensor_id": "22faf2ed-c430-4a28-9a7e-ec414186d105",
+                "sensor_id": "3f421d55-ff3a-4066-9ff6-eb81d2381cc8",
                 "data_units": "",
                 "entry": {
                     "entry_id": 2003,
-                    "value": "89",
-                    "timestamp": "05/12/2021 18:58:20"
+                    "value": "6",
+                    "timestamp": "04/12/2021 18:48:04"
                 }
             }
         ]

@@ -1,20 +1,19 @@
-from model.garden import Garden
+from model.sensor import SensorEntry, Sensor
 from model.pot import Pot
+from model.garden import Garden
 from model.plant import Plant
-from model.sensor import Sensor
 from dao.garden_repo import GardenRepository
 import config
 import os.path
 
 from tkinter import *
-from dao.garden_repo import GardenRepository
 from view.app_main_window import AppMainWindow
 from view.application import Application
+import utils.global_utils as utils
 
 if __name__ == '__main1__':
-    pass
     # my_garden = Garden("Home garden")
-    # garden_repo = GardenRepository(my_garden)
+    garden_repo = GardenRepository("Home garden")
     # # print(type(my_garden))
     # # print(my_garden)
     # # herbs = Plant("Herbs", 40,50, 22, 6, "")
@@ -36,11 +35,11 @@ if __name__ == '__main1__':
     # garden_repo.update_garden_pots()
 
 
-    # dirname = os.path.join(config.DATA_PATH, "Home_garden")
-    # filename = os.path.join(dirname, "Home_garden.json")
-    # #
-    # garden_repo.load_garden_data_from_file(filename)
-    # print("my garden pots: ", garden_repo.garden.pots)
+    dirname = os.path.join(config.DATA_PATH, "Home_garden")
+    filename = os.path.join(dirname, "Home_garden.json")
+    print("garden, ", garden_repo.garden_path)
+    garden_repo.load_garden_data_from_file(filename)
+    print("my garden pots: ", garden_repo.garden.pots)
 
     # print(garden_repo.garden.__str__)
     # print(garden_repo.garden.pots[1].sensors[0].sensor_data)
@@ -55,16 +54,17 @@ if __name__ == '__main1__':
     #     herbs_pot.save_pot_to_file(filename)
 
 if __name__ == '__main__':
-    dirname = os.path.join(config.DATA_PATH, "Home_garden")
-    filename = os.path.join(dirname, "Home_garden.json")
-
-    garden_repo = GardenRepository(garden_path=dirname)
+    # garden_name = "Home garden"
+    # garden_dirname = os.path.join(config.DATA_PATH, utils.generate_filename(garden_name))
+    # garden_filename = os.path.join(garden_dirname, utils.generate_filename(garden_name)+ ".json")
+    # print("gr*", garden_filename)
+    # garden_repo = GardenRepository("Home_garden", garden_filename)
     #
     #
     # garden_repo.load_garden_data_from_file(filename)
 
     # print("My 'Home Garden'")
-    # print(garden_repo.garden.__repr__())
+    # print(garden_repo.garden.__r epr__())
 
-    app = Application(garden_repo, filename)
+    app = Application()
     app.start()

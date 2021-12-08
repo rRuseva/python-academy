@@ -9,15 +9,18 @@ from model.sensor import SensorEntry, Sensor
 from model.pot import Pot
 from model.garden import Garden
 from model.plant import Plant
+import utils.global_utils as utils
 
 class GardenRepository:
-    def __init__(self, garden = None, garden_path = ""):
-        self.garden = garden
+    def __init__(self, garden_name, garden_path = ""):
+        self.garden = Garden(garden_name)
         if self.garden is not None:
-            self.garden_path = os.path.join(config.DATA_PATH, generate_filename(self.garden.name) )
+            self.garden_path = os.path.join(config.DATA_PATH, utils.generate_filename(self.garden.name) )
         else:
             self.garden_path = garden_path
 
+    def __str__(self):
+        return self.garden.__repr__()
     def pots_count(self):
         return len(self.garden.pots)
 
@@ -36,11 +39,11 @@ class GardenRepository:
 
         data = self.garden.get_garden_data_info()
         # print("garden data", data)
-        garden_file_name = os.path.join(self.garden_path,generate_filename(self.garden.name) + ".json")
+        garden_file_name = os.path.join(self.garden_path,utils.generate_filename(self.garden.name) + ".json")
         save_to_file(data, garden_file_name ,'w',encoding=config.ENCODING)
         ### PLANT info is overriden CHECK it
         for pot in self.garden.pots:
-            filename = os.path.join(self.garden_path, generate_pot_filename(pot.name))
+            filename = os.path.join(self.garden_path, utils.generate_pot_filename(pot.name))
             self.save_pot_data_to_file(filename, pot)
         print(f"Garden data saved to {garden_file_name}")
 
@@ -51,7 +54,7 @@ class GardenRepository:
 
     def update_garden_pots(self):
         for pot in self.garden.pots:
-            filename = os.path.join(self.garden_path, generate_pot_filename(pot.name))
+            filename = os.path.join(self.garden_path, utils.generate_pot_filename(pot.name))
             self.update_pot_file_data(filename, pot)
         print("Garden pots are updated!")
 
@@ -71,14 +74,17 @@ class GardenRepository:
         # return pot
 
     def load_garden_data_from_file(self,filename):
+        self.garden_path = os.path.dirname(filename)
         garden_data = load_from_file(filename)
-        # print(garden_data)
+        # print(filename)
+        # print("g ",garden_data)
         self.garden = Garden(garden_data["name"])
         new_pots = []
 
         for pot_info in garden_data['pots']:
-            filename = os.path.join(self.garden_path, generate_pot_filename(pot_info["pot_name"]))
+            filename = os.path.join(self.garden_path, utils.generate_pot_filename(pot_info["pot_name"]))
             pot = Pot(pot_info["pot_name"])
+            # print("pot_file ", filename)
             self.load_pot_data_from_file(filename, pot)
             new_pots.append(pot)
         garden_data['pots'] = new_pots
@@ -141,8 +147,4 @@ def load_from_file(filename):
     except Exception as ex:
         print(f"Error reading file: {ex}")
 
-def generate_filename(name):
-    return str(name).replace(" ", "_")
 
-def generate_pot_filename(name):
-    return "pot_" + str(name).replace(" ", "_") + ".json"

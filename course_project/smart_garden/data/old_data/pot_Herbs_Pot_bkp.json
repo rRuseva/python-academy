@@ -1,0 +1,126 @@
+{
+    "pot_id": "6a812a65-31a5-4e86-ad5e-23ce6d30eed0",
+    "pot_name": "Herbs Pot",
+    "measurements": [
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "87a95c54-3bf2-4b2e-bc06-b0fd2004320b",
+                "entry": {
+                    "entry_id": 1001,
+                    "value": "1",
+                    "timestamp": "04/12/2021 16:27:57"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "94520f41-e00c-4e1b-bc59-5d977a7907d4",
+                "entry": {
+                    "entry_id": 2001,
+                    "value": "6",
+                    "timestamp": "04/12/2021 16:27:57"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "87a95c54-3bf2-4b2e-bc06-b0fd2004320b",
+                "entry": {
+                    "entry_id": 1002,
+                    "value": "0",
+                    "timestamp": "04/12/2021 16:27:57"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "94520f41-e00c-4e1b-bc59-5d977a7907d4",
+                "entry": {
+                    "entry_id": 2002,
+                    "value": "6",
+                    "timestamp": "04/12/2021 16:27:57"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "87a95c54-3bf2-4b2e-bc06-b0fd2004320b",
+                "entry": {
+                    "entry_id": 1003,
+                    "value": "1",
+                    "timestamp": "04/12/2021 16:27:57"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "94520f41-e00c-4e1b-bc59-5d977a7907d4",
+                "entry": {
+                    "entry_id": 2003,
+                    "value": "6",
+                    "timestamp": "04/12/2021 16:27:57"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "a8ac0fa3-e00f-4b38-98b5-30255b620694",
+                "entry": {
+                    "entry_id": 1001,
+                    "value": "0",
+                    "timestamp": "04/12/2021 16:29:14"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "87ed640d-dc7b-46c7-bd22-ebf055986c99",
+                "entry": {
+                    "entry_id": 2001,
+                    "value": "6",
+                    "timestamp": "04/12/2021 16:29:14"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "a8ac0fa3-e00f-4b38-98b5-30255b620694",
+                "entry": {
+                    "entry_id": 1002,
+                    "value": "171",
+                    "timestamp": "04/12/2021 16:29:14"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "87ed640d-dc7b-46c7-bd22-ebf055986c99",
+                "entry": {
+                    "entry_id": 2002,
+                    "value": "6",
+                    "timestamp": "04/12/2021 16:29:14"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "a8ac0fa3-e00f-4b38-98b5-30255b620694",
+                "entry": {
+                    "entry_id": 1003,
+                    "value": "182",
+                    "timestamp": "04/12/2021 16:29:14"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "87ed640d-dc7b-46c7-bd22-ebf055986c99",
+                "entry": {
+                    "entry_id": 2003,
+                    "value": "6",
+                    "timestamp": "04/12/2021 16:29:14"
+                }
+            }
+        ]
+    ]
+}
