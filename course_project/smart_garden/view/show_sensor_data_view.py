@@ -6,7 +6,7 @@ from dao.garden_repo import GardenRepository
 DEFAULT_COLUMN_WIDTH_PX = 100
 
 
-class ShowBooksView(ttk.Frame):
+class ShowDataView(ttk.Frame):
     def __init__(self, parent, label="", *args, entity_cls, books_repo: GardenRepository):
         super().__init__(parent, *args, padding="3 0 0 0")
         self.grid(column=0, row=0, sticky=(N, W, E, S))

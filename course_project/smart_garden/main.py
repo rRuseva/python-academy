@@ -5,7 +5,8 @@ from model.plant import Plant
 from dao.garden_repo import GardenRepository
 import config
 import os.path
-
+from pandas import DataFrame
+import matplotlib.pyplot as plt
 from tkinter import *
 from view.app_main_window import AppMainWindow
 from view.application import Application
@@ -54,17 +55,28 @@ if __name__ == '__main1__':
     #     herbs_pot.save_pot_to_file(filename)
 
 if __name__ == '__main__':
-    # garden_name = "Home garden"
-    # garden_dirname = os.path.join(config.DATA_PATH, utils.generate_filename(garden_name))
-    # garden_filename = os.path.join(garden_dirname, utils.generate_filename(garden_name)+ ".json")
+    garden_name = "Home garden"
+    garden_dirname = os.path.join(config.DATA_PATH, utils.generate_filename(garden_name))
+    garden_filename = os.path.join(garden_dirname, utils.generate_filename(garden_name)+ ".json")
     # print("gr*", garden_filename)
-    # garden_repo = GardenRepository("Home_garden", garden_filename)
+    garden_repo = GardenRepository("Home_garden", garden_filename)
     #
     #
-    # garden_repo.load_garden_data_from_file(filename)
+    garden_repo.load_garden_data_from_file(garden_filename)
 
-    # print("My 'Home Garden'")
-    # print(garden_repo.garden.__r epr__())
+    print("My 'Home Garden'")
+    # print(garden_repo.garden.__repr__())
+    pot = garden_repo.garden.pots[0]
+    sensor = pot.sensors[0]
+    df = sensor.get_data_frame()
 
-    app = Application()
-    app.start()
+    print(df)
+
+    figure = plt.Figure(figsize=(5,4), dpi=100)
+    ax = figure.add_subplot(111)
+    df = df[['timestamp','value']]
+    df.plot(kind='line', legend=True, ax=ax, color='r',marker='o', fontsize=10)
+    ax.set_title('Soil Moisture')
+    plt.show()
+    # app = Application()
+    # app.start()

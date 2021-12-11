@@ -21,6 +21,7 @@ class GardenRepository:
 
     def __str__(self):
         return self.garden.__repr__()
+
     def pots_count(self):
         return len(self.garden.pots)
 
@@ -122,6 +123,8 @@ class GardenRepository:
                 ser.close()
                 print("Serial connection closed!")
 
+    def get_data_frames(self, pot):
+        pass
 # helpers
 def dumper(obj):
     try:

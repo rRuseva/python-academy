@@ -4,6 +4,7 @@ import itertools
 from model.plant import Plant
 from typing import List, Union
 import uuid
+from pandas import DataFrame
 
 
 @dataclass
@@ -67,3 +68,10 @@ class Sensor:
         se = SensorEntry(data_dict["entry"]["entry_id"], data_dict["entry"]["value"], data_dict["entry"]["timestamp"])
         self.update_sensor_data(se)
 
+    def get_data_frame(self):
+
+        data = {
+            "timestamp":[datetime.timestamp(datetime.strptime(entry.timestamp,"%d/%m/%Y %H:%M:%S")) for entry in self.sensor_data],
+            "value": [entry.value for entry in self.sensor_data]
+        }
+        return  DataFrame(data,columns=["timestamp","value"])
