@@ -7,7 +7,10 @@
         "humidity": 50,
         "soil_moisture": 60,
         "temperature": 20,
-        "light_levels": 60
+        "light_levels": 60,
+        "height": null,
+        "leaves_density": null,
+        "notes": null
     },
     "location": null,
     "notes": null,

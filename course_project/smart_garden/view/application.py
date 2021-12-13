@@ -17,6 +17,7 @@ from tkinter import  messagebox
 from tkinter.filedialog import askopenfile
 from pandas import DataFrame
 
+from view.app_sensor_reading_dialog import SensorRadingsDialog
 
 
 class Application:
@@ -77,6 +78,7 @@ class Application:
         """set new garden for the repository"""
         self.garden_repository.set_garden(garden)
         self.save_garden_repo()
+        self.reload_garden()
 
     def get_garden_info(self):
         """returns string representation ofmaingardenattributes"""
@@ -92,13 +94,23 @@ class Application:
         """returns full garden object"""
         return self.garden_repository.garden
 
+    def show_start_readings(self, pot):
+        self.show_start_readings_dialog = SensorRadingsDialog(self.root, application=self,
+                                              garden_repository=self.garden_repository, pot=pot)
 
-    def start_readings(self, pot, numb_readings):
+
+    def start_readings(self, pot, numb_readings, port = None):
+        print(numb_readings)
         try:
-            self.garden_repository.read_pot_sensors_data(pot, numb_readings)
+            self.garden_repository.read_pot_sensors_data(pot, int(numb_readings))
             self.garden_repository.update_garden_pots()
+            self.save_garden_repo()
+            messagebox.showinfo(title="Reading complete", message="Congrats! :)\nYou have new data!")
+            self.reload_garden()
         except serial.SerialException as er:
             messagebox.showinfo(title="Error reading", message=er)
+
+        return True
 
     def add_new_pot(self):
         self.plants = self.garden_repository.get_plants()

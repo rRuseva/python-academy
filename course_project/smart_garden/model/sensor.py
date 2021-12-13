@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field, asdict, astuple
 from datetime import datetime
+from datetime import timedelta
+
 import itertools
 from model.plant import Plant
 from typing import List, Union
@@ -12,7 +14,8 @@ class SensorEntry:
     """Data model class describing readings from sensor """
     entry_id : int
     value: int
-    timestamp : datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S") #.timestamp() #
+    # timestamp : datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S") #.timestamp() #
+    timestamp : datetime = (datetime.now() + timedelta(minutes=10)).strftime("%d/%m/%Y %H:%M:%S")
 
     def __repr__(self):
         return f"\n{str(self.entry_id):>5.5s} {self.timestamp} | " \

@@ -14,7 +14,7 @@ class AppGardenView(ttk.Frame):
         super().__init__(root, padding="5 10 5 10")
         self.application = application
         self.name = name
-        # root.attributes('-alpha',0.5)
+        # self.attributes('-alpha',0.5)
         self.grid(row=0, column=0, columnspan=8, sticky=(N, W, E, S) ) #columnspan=5,
         root.title(self.name)
         # add menu
@@ -39,7 +39,7 @@ class AppGardenView(ttk.Frame):
         add_pot_str = StringVar()
         add_pot_btn = Button(self, textvariable=add_pot_str, command=application.add_new_pot, font=(style.FONT_FAMILY, 10), bg=style.COLOR2, fg="white", height=2, width=10)
         add_pot_str.set("Add pot")
-        add_pot_btn.grid(column=5, row=1, sticky=(N,E))
+        add_pot_btn.grid(column=5, row=1, columnspan=1, sticky=(N,E))
         self.update_idletasks()
         ### tab view for each pot
         self.pots_notebook = ttk.Notebook(self)
@@ -54,7 +54,8 @@ class AppGardenView(ttk.Frame):
         tab_width = style.MAIN_WIDTH
         for i, pot in enumerate(self.pots):
             self.frame = Frame(self.pots_notebook, width=tab_width)
-            self.frame.grid(column=0, row=2, columnspan=15)
+            self.frame.grid(column=0, row=2, columnspan=6)
+
             self.frame.grid_configure(padx=6,pady=6)
             tab_name = pot.name
             self.pot_view = AppPotView(self.frame, self.application, pot)
@@ -94,7 +95,7 @@ class AppGardenView(ttk.Frame):
 
     def on_new_garden(self):
         print("add garden")
-        self.application.add_garden()
+        self.application.create_garden()
 
     def on_load_garden(self):
         self.application.load_garden()

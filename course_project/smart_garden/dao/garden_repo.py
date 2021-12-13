@@ -15,7 +15,7 @@ class GardenRepository:
     def __init__(self, garden_name, garden_path = ""):
         self.garden = Garden(garden_name)
         if self.garden is not None:
-            self.garden_path = os.path.join(config.DATA_PATH, utils.generate_filename(self.garden.name) )
+            self.garden_path = utils.generate_garden_root_dir(self.garden.name)
         else:
             self.garden_path = garden_path
 
@@ -24,6 +24,10 @@ class GardenRepository:
 
     def set_garden(self, garden):
         self.garden = garden
+        if self.garden is not None:
+            print("garden_dir", self.garden_path)
+            self.garden_path = utils.generate_garden_root_dir(garden.name)
+        print("garden_dir", self.garden_path)
 
     def pots_count(self):
         return len(self.garden.pots)
@@ -38,6 +42,7 @@ class GardenRepository:
         return pot.get_sensors()
 
     def save_garden_data(self):
+        print(self.garden_path)
         try:
             os.mkdir(self.garden_path, mode=0o777)
             print("Creating garden directory!")
@@ -46,11 +51,11 @@ class GardenRepository:
 
         data = self.garden.get_garden_data_info()
         # print("garden data", data)
-        garden_file_name = os.path.join(self.garden_path,utils.generate_filename(self.garden.name) + ".json")
+        garden_file_name = os.path.join(self.garden_path,utils.generate_file_path(self.garden.name, ""))
         save_to_file(data, garden_file_name ,'w',encoding=config.ENCODING)
         ### PLANT info is overriden CHECK it
         for pot in self.garden.pots:
-            filename = os.path.join(self.garden_path, utils.generate_pot_filename(pot.name))
+            filename = os.path.join(self.garden_path, utils.generate_file_path(pot.name, "pot"))
             self.save_pot_data_to_file(filename, pot)
         print(f"Garden data saved to {garden_file_name}")
 
@@ -63,7 +68,7 @@ class GardenRepository:
 
     def update_garden_pots(self):
         for pot in self.garden.pots:
-            filename = os.path.join(self.garden_path, utils.generate_pot_filename(pot.name))
+            filename = os.path.join(self.garden_path, utils.generate_file_path(pot.name,"pot"))
             self.update_pot_file_data(filename, pot)
         print("Garden pots are updated!")
 
@@ -91,7 +96,7 @@ class GardenRepository:
         new_pots = []
 
         for pot_info in garden_data['pots']:
-            filename = os.path.join(self.garden_path, utils.generate_pot_filename(pot_info["pot_name"]))
+            filename = os.path.join(self.garden_path, utils.generate_file_path(pot_info["pot_name"],"pot"))
             pot = Pot(pot_info["pot_name"])
             # print("pot_file ", filename)
             self.load_pot_data_from_file(filename, pot)
@@ -136,6 +141,7 @@ class GardenRepository:
 
     def get_plants(self):
         return [pot.plant.name for pot in self.garden.get_pots()]
+
 
 # helpers
 def dumper(obj):

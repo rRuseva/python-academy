@@ -13,8 +13,7 @@ class CreateGardenDialog:
         self.application = application
         self.parent = parent
         self.garden_repo = garden_repository
-
-        self.garden_dlg = Toplevel(self.parent)
+        self.garden_dlg = Toplevel(parent)
         self.garden_dlg.title("Add Garden")
         left, top = get_center_window_left_top(parent, style.MAIN_WIDTH/2, style.MAIN_HEIGHT*2/3)
         self.garden_dlg .geometry("+%d+%d" %(left//2,top))
