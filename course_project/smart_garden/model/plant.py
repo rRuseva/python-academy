@@ -21,7 +21,7 @@ class Plant:
     height : int = None
     leaves_density : int = None
     notes : str = None
-    id : Union[uuid.UUID, None] = field(default_factory=uuid.uuid4)
+    id  : Union[uuid.UUID, None] = field(default_factory=uuid.uuid4)
 
     def __repr__(self):
         return f"id: {str(self.id):>5s} - {self.name} needs of " \
@@ -31,7 +31,7 @@ class Plant:
                f"average {self.light_levels} hours per day \n"
 
     def __str__(self):
-        return f"{str(self.id):>3s}_{self.name} needs of " \
+        return f"# {str(self.id):<3s} {self.name} needs of " \
                f"air humidity - {self.humidity} % | "\
                f"soil moisture - {self.soil_moisture} % | " \
                f"air temperature - {self.temperature} C | " \
@@ -52,12 +52,13 @@ class Plant:
         return {
             "height" : self.height,
             "leaves_density": self.leaves_density,
+            "notes":self.notes
         }
 
     # def get_plant_data(self):
     def __dict__(self):
         return {
-            "id" : self.id,
+            "id" : str(self.id),
             "name" : self.name,
             "humidity" : self.humidity,
             "soil_moisture" : self.soil_moisture,

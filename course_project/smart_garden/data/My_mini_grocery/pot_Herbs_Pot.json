@@ -1,0 +1,1321 @@
+{
+    "pot_id": "6f62bd83-7e2a-46b8-b389-515c9824137e",
+    "pot_name": "Herbs Pot",
+    "plant": {
+        "id": "997822bb-b2f8-43ac-b4cb-2b7f102fa545",
+        "name": "Herbs",
+        "humidity": 40,
+        "soil_moisture": 50,
+        "temperature": 22,
+        "light_levels": 6,
+        "height": "",
+        "leaves_density": null,
+        "notes": null
+    },
+    "location": "South window",
+    "dimensions": [
+        20,
+        20
+    ],
+    "notes": null,
+    "measurements": [
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1001,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:11:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2001,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1002,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:11:48"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2002,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:48"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1003,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:11:50"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2003,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:50"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1004,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:11:52"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2004,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:52"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1005,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:11:54"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2005,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:54"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1006,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:11:56"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2006,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:56"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1007,
+                    "value": "214",
+                    "timestamp": "12/12/2021 14:11:58"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2007,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:11:58"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1008,
+                    "value": "214",
+                    "timestamp": "12/12/2021 14:12:00"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2008,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:12:00"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1009,
+                    "value": "215",
+                    "timestamp": "12/12/2021 14:12:02"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2009,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:12:02"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1010,
+                    "value": "21",
+                    "timestamp": "12/12/2021 14:13:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2010,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:13:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1011,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:14:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2011,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:14:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1012,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:15:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2012,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:15:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1013,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:11:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2013,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:16:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1014,
+                    "value": "220",
+                    "timestamp": "12/12/2021 14:16:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2014,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:16:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1015,
+                    "value": "220",
+                    "timestamp": "12/12/2021 14:17:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2015,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:17:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1016,
+                    "value": "220",
+                    "timestamp": "12/12/2021 14:18:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2016,
+                    "value": "11",
+                    "timestamp": "12/12/2021 14:18:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1017,
+                    "value": "220",
+                    "timestamp": "12/12/2021 14:19:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2017,
+                    "value": "9",
+                    "timestamp": "12/12/2021 14:19:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1018,
+                    "value": "222",
+                    "timestamp": "12/12/2021 14:20:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2018,
+                    "value": "15",
+                    "timestamp": "12/12/2021 14:20:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1019,
+                    "value": "222",
+                    "timestamp": "12/12/2021 14:21:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2019,
+                    "value": "9",
+                    "timestamp": "12/12/2021 14:21:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1020,
+                    "value": "221",
+                    "timestamp": "12/12/2021 14:22:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2020,
+                    "value": "12",
+                    "timestamp": "12/12/2021 14:22:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1021,
+                    "value": "219",
+                    "timestamp": "12/12/2021 14:23:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2021,
+                    "value": "15",
+                    "timestamp": "12/12/2021 14:23:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1022,
+                    "value": "220",
+                    "timestamp": "12/12/2021 14:24:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2022,
+                    "value": "18",
+                    "timestamp": "12/12/2021 14:24:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1023,
+                    "value": "219",
+                    "timestamp": "12/12/2021 14:25:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2023,
+                    "value": "21",
+                    "timestamp": "12/12/2021 14:25:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1024,
+                    "value": "169",
+                    "timestamp": "12/12/2021 14:26:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2024,
+                    "value": "24",
+                    "timestamp": "12/12/2021 14:26:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1025,
+                    "value": "33",
+                    "timestamp": "12/12/2021 14:27:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2025,
+                    "value": "27",
+                    "timestamp": "12/12/2021 14:27:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1026,
+                    "value": "27",
+                    "timestamp": "12/12/2021 14:28:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2026,
+                    "value": "29",
+                    "timestamp": "12/12/2021 14:28:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1027,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:29:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2027,
+                    "value": "32",
+                    "timestamp": "12/12/2021 14:29:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1028,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:30:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2028,
+                    "value": "34",
+                    "timestamp": "12/12/2021 14:30:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1029,
+                    "value": "1",
+                    "timestamp": "12/12/2021 14:31:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2029,
+                    "value": "35",
+                    "timestamp": "12/12/2021 14:31:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1030,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:32:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2030,
+                    "value": "36",
+                    "timestamp": "12/12/2021 14:32:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1031,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:33:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2031,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:33:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1032,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:34:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2032,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:34:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1033,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:35:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2033,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:35:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1034,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:36:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2034,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:36:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1035,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:37:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2035,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:37:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1036,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:38:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2036,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:38:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1037,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:39:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2037,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:39:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1038,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:40:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2038,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:40:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1039,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:41:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2039,
+                    "value": "37",
+                    "timestamp": "12/12/2021 14:41:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1040,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:42:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2040,
+                    "value": "38",
+                    "timestamp": "12/12/2021 14:42:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1041,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:43:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2041,
+                    "value": "40",
+                    "timestamp": "12/12/2021 14:43:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1042,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:44:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2042,
+                    "value": "42",
+                    "timestamp": "12/12/2021 14:44:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1043,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:45:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2043,
+                    "value": "45",
+                    "timestamp": "12/12/2021 14:45:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1044,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:46:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2044,
+                    "value": "46",
+                    "timestamp": "12/12/2021 14:46:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1045,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:47:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2045,
+                    "value": "48",
+                    "timestamp": "12/12/2021 14:47:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1046,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:48:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2046,
+                    "value": "51",
+                    "timestamp": "12/12/2021 14:48:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1047,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:49:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2047,
+                    "value": "53",
+                    "timestamp": "12/12/2021 14:49:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1048,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:50:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2048,
+                    "value": "55",
+                    "timestamp": "12/12/2021 14:50:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1049,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:51:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2049,
+                    "value": "57",
+                    "timestamp": "12/12/2021 14:51:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1050,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:52:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2050,
+                    "value": "59",
+                    "timestamp": "12/12/2021 14:52:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1051,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:53:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2051,
+                    "value": "61",
+                    "timestamp": "12/12/2021 14:53:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1052,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:54:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2052,
+                    "value": "62",
+                    "timestamp": "12/12/2021 14:54:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1053,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:55:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2053,
+                    "value": "64",
+                    "timestamp": "12/12/2021 14:55:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1054,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:56:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2054,
+                    "value": "66",
+                    "timestamp": "12/12/2021 14:56:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1055,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:57:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2055,
+                    "value": "68",
+                    "timestamp": "12/12/2021 14:57:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1056,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:58:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2056,
+                    "value": "70",
+                    "timestamp": "12/12/2021 14:58:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1057,
+                    "value": "0",
+                    "timestamp": "12/12/2021 14:59:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2057,
+                    "value": "72",
+                    "timestamp": "12/12/2021 14:59:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1058,
+                    "value": "0",
+                    "timestamp": "12/12/2021 15:00:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2058,
+                    "value": "74",
+                    "timestamp": "12/12/2021 15:00:46"
+                }
+            }
+        ],
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "3b0ab970-f032-4825-97d2-0d2b3c77f3af",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1059,
+                    "value": "0",
+                    "timestamp": "12/12/2021 15:11:46"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "c710e4ae-2912-49b5-8888-ae1563e487b8",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2059,
+                    "value": "75",
+                    "timestamp": "12/12/2021 15:11:46"
+                }
+            }
+        ]
+    ]
+}

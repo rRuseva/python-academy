@@ -1,0 +1,32 @@
+{
+    "id": "87fa9b4004d640babf417cbdc0cf7de6",
+    "name": "My Herbs Garden",
+    "status": "new",
+    "date_created": "12/12/2021 13:16:08",
+    "pots": [
+        {
+            "pot_id": "a7932b43-c1b1-45e3-84f9-8c7b77cd0a4b",
+            "pot_name": "Herbs Pot",
+            "plant": {},
+            "location": "South window",
+            "dimensions": [
+                20,
+                20
+            ],
+            "notes": null
+        },
+        {
+            "pot_id": "6115e1e1-20ff-4fb4-9323-8f211bfdd850",
+            "pot_name": "Strawberries Pot",
+            "plant": {},
+            "location": "Balcony",
+            "dimensions": [
+                15,
+                15
+            ],
+            "notes": null
+        }
+    ],
+    "dimensions": [],
+    "location": []
+}

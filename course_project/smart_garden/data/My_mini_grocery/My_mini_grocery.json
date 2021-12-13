@@ -1,0 +1,40 @@
+{
+    "id": "633332fc7c58498d9482116acc7809fc",
+    "name": "My mini grocery",
+    "status": "New",
+    "date_created": "12/12/2021 14:11:46",
+    "pots": [
+        {
+            "pot_id": "6f62bd83-7e2a-46b8-b389-515c9824137e",
+            "pot_name": "Herbs Pot",
+            "location": "South window",
+            "dimensions": [
+                20,
+                20
+            ],
+            "notes": null
+        },
+        {
+            "pot_id": "0ba49265-6812-444d-be6e-dc802986567a",
+            "pot_name": "Cherry Tomatoes Pot",
+            "location": "Balcony",
+            "dimensions": [
+                50,
+                50
+            ],
+            "notes": null
+        },
+        {
+            "pot_id": "6115e1e1-20ff-4fb4-9323-8f211bfdd850",
+            "pot_name": "Strawberries Pot",
+            "location": "Balcony",
+            "dimensions": [
+                15,
+                15
+            ],
+            "notes": null
+        }
+    ],
+    "dimensions": [],
+    "location": []
+}

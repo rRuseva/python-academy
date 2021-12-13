@@ -10,7 +10,7 @@ const int ledPin = 9;       // Led pin at Arduino pin 9
 const int nightLight=50;      //threshold for sunlight after sunset
 const int waterValue = 265;  //value from sensor in water
 const int airValue = 627;   //value from a dry sensor in the air
-const int moisturizedSoil = 310;  // threshold for moisturized soil
+const int moisturizedSoil = 230;  // threshold for moisturized soil
 const int drySoil = 470;           //threshold for dry soil
 
 const int drySoilPercent = map(drySoil, airValue, waterValue, 0, 100);
@@ -41,9 +41,9 @@ void loop() {
   Serial.print("light: ");
   Serial.println(sunlightValue);
   Serial.print("soil_moisture: ");
-  Serial.println(soilMoisturePercent);
+  Serial.println(soilMoisturePercent );
    
-  delay(6000);
+  delay(1500);
   
 //  sensors_event_t humidity, temp;
 //  aht.getEvent(&humidity, &temp);// populate temp and humidity objects with fresh data

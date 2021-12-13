@@ -4,7 +4,7 @@ import itertools
 from model.plant import Plant
 from typing import List, Union
 import uuid
-from pandas import DataFrame
+import pandas as pd
 
 
 @dataclass
@@ -12,7 +12,7 @@ class SensorEntry:
     """Data model class describing readings from sensor """
     entry_id : int
     value: int
-    timestamp : datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    timestamp : datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S") #.timestamp() #
 
     def __repr__(self):
         return f"\n{str(self.entry_id):>5.5s} {self.timestamp} | " \
@@ -54,7 +54,8 @@ class Sensor:
         return asdict(self)
 
     def get_sensor_data(self):
-        return ({"sensor_name":self.name, "sensor_id":str(self.sensor_id), "data_units": self.data_units, "entry": entry} for entry in self.sensor_data)
+        return ({"sensor_name":self.name, "sensor_id":str(self.sensor_id), "data_units": self.data_units,
+                 "entry": entry.__dict__() } for entry in self.sensor_data)
 
     def update_sensor_data(self, se:SensorEntry):
         self.sensor_data.append(se)
@@ -69,9 +70,25 @@ class Sensor:
         self.update_sensor_data(se)
 
     def get_data_frame(self):
-
+        # sd["timestamp"] = [pd.Timestamp(t, unit='s') for t in sd["timestamp"]]
         data = {
-            "timestamp":[datetime.timestamp(datetime.strptime(entry.timestamp,"%d/%m/%Y %H:%M:%S")) for entry in self.sensor_data],
-            "value": [entry.value for entry in self.sensor_data]
+            "value": [int(entry.value) for entry in self.sensor_data],
+            # "timestamp":[datetime.timestamp(datetime.strptime(entry.timestamp,"%d/%m/%Y %H:%M:%S")) for entry in self.sensor_data]
+            "timestamp":[pd.Timestamp(entry.timestamp) for entry in self.sensor_data]
+
+            # "timestamp":[entry.timestamp for entry in self.sensor_data]
         }
-        return  DataFrame(data,columns=["timestamp","value"])
+        # return  pd.DataFrame(data,columns=["timestamp","value"])
+        return data
+
+    def short_repr(self):
+        # print("shot_repr", self.plant)
+        dict =  {
+            "sensor_id"     : str(self.sensor_id),
+            "name"          : self.name,
+            "units"          : self.data_units,
+            "type"          : self.type,
+            "notes"         : self.notes
+        }
+        # print("shot_repr", dict['plant'])
+        return dict

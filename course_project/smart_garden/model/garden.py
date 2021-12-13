@@ -6,7 +6,7 @@ import uuid
 class Garden:
     """A garden model class:
     a single garden may have more than one pot """
-    def __init__(self, name, id=None, status = "new", pots = [],  dimensions = [], location = []):
+    def __init__(self, name, id=None, status = "new", pots = [],  dimensions = (), location = ()):
         self.name = name
         self.status = status
         self.date_created = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
@@ -50,8 +50,21 @@ class Garden:
             "status"         : self.status,
             "date_created"   : self.date_created,
             "pots"           : [p.short_repr() for p in self.pots],
-            "dimensions"     : self.dimensions,
-            "location"       : self.location
+            "dimensions"     : self.dimensions,  #f"{self.dimensions[0] if self.dimensions[0] else 'NA'}x{self.dimensions[1] if self.dimensions[1] else 'NA'}",
+            "location"       : self.location  #f"{self.location if self.location else 'NA'}"
+        }
+        # print("get_garden_info", dict["pots"])
+        return dict
+
+    def get_garden_short_repr(self):
+        dict = {
+            # "id"             : str(self.id),
+            "name"           : self.name,
+            "status"         : self.status,
+            "date_created"   : self.date_created,
+            # "pots"           : [p.short_repr() for p in self.pots],
+            "dimensions"     : self.dimensions,  #f"{self.dimensions[0] if self.dimensions[0] else 'NA'}x{self.dimensions[1] if self.dimensions[1] else 'NA'}",
+            "location"       : self.location  #f"{self.location if self.location else 'NA'}"
         }
         # print("get_garden_info", dict["pots"])
         return dict
@@ -76,4 +89,5 @@ class Garden:
         self.dimensions = dict_data["dimensions"]
         self.location = dict_data["location"]
 
-
+    def get_pots(self):
+        return self.pots

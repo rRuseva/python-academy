@@ -22,6 +22,9 @@ class GardenRepository:
     def __str__(self):
         return self.garden.__repr__()
 
+    def set_garden(self, garden):
+        self.garden = garden
+
     def pots_count(self):
         return len(self.garden.pots)
 
@@ -30,6 +33,9 @@ class GardenRepository:
 
     def pot_sensors_count(self, pot):
         return pot.get_sensors_count()
+
+    def get_pot_sensors(self, pot):
+        return pot.get_sensors()
 
     def save_garden_data(self):
         try:
@@ -50,6 +56,8 @@ class GardenRepository:
 
     def save_pot_data_to_file(self,filename, pot):
         data = pot.__dict__()
+        # print("pot data to file ")
+        # print(data)
         save_to_file(data, filename, 'w', encoding=config.ENCODING)
         print(f"Pot data saved to {filename}")
 
@@ -71,14 +79,14 @@ class GardenRepository:
         # print("********** pot data")
         # print(data)
         # pot = Pot(data["pot_name"])
-        pot.update_pot_from_dict(data)
+        if data:
+            pot.update_pot_from_dict(data)
         # return pot
 
     def load_garden_data_from_file(self,filename):
         self.garden_path = os.path.dirname(filename)
         garden_data = load_from_file(filename)
-        # print(filename)
-        # print("g ",garden_data)
+
         self.garden = Garden(garden_data["name"])
         new_pots = []
 
@@ -123,8 +131,12 @@ class GardenRepository:
                 ser.close()
                 print("Serial connection closed!")
 
-    def get_data_frames(self, pot):
-        pass
+    def get_garden_info(self):
+        return self.garden.get_garden_short_repr()
+
+    def get_plants(self):
+        return [pot.plant.name for pot in self.garden.get_pots()]
+
 # helpers
 def dumper(obj):
     try:
@@ -149,5 +161,6 @@ def load_from_file(filename):
             return json.load(f)
     except Exception as ex:
         print(f"Error reading file: {ex}")
+        return None
 
 
