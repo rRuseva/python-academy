@@ -12,6 +12,7 @@ class AppPotView(ttk.Frame):
     def __init__(self, parent, application, pot):
         super().__init__(parent, padding="10 10 10 10")
         self.parent = parent
+        self.application = application
         self.pot = pot
         self.grid(row=0, column=0,columnspan=8, sticky=(N, W, E, S) ) #columnspan=5,
 
@@ -23,7 +24,7 @@ class AppPotView(ttk.Frame):
         self.label_pot_name.grid(columnspan=5, column=0, row=0)
 
         start_readings = StringVar()
-        readings_btn = Button(self, textvariable=start_readings, command=partial(application.start_readings,pot, 1), font=(style.FONT_FAMILY, 10), bg=style.COLOR2, fg="white", height=2, width=10)
+        readings_btn = Button(self, textvariable=start_readings, command=partial(self.on_start_readings, pot), font=(style.FONT_FAMILY, 10), bg=style.COLOR2, fg="white", height=2, width=10)
         start_readings.set("Start Readings")
         readings_btn.grid(column=6, row=0, sticky=(N,E))
 
@@ -38,3 +39,6 @@ class AppPotView(ttk.Frame):
             frame = Frame(self, width=style.MAIN_WIDTH,)
             frame.grid(column=i, row=2)
             self.pot_view = AppSensorView(frame, sensor)
+
+    def on_start_readings(self,pot):
+        self.application.show_start_readings(pot)

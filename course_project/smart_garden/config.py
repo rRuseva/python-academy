@@ -10,6 +10,8 @@ import os
 ROOT_DIR = os.path.abspath(os.curdir)
 DATA_PATH = os.path.join(ROOT_DIR, 'data')
 DEFAULT_GARDEN_NAME = "Home garden"
+DB_FILE_EXT = "json"
+
 ASSETS_PATH = os.path.join(ROOT_DIR,'assets')
 
 ENCODING = 'UTF-8'

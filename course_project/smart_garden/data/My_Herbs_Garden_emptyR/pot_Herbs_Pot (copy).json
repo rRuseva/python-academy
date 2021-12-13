@@ -1,0 +1,22 @@
+{
+    "pot_id": "6f62bd83-7e2a-46b8-b389-515c9824137e",
+    "pot_name": "Herbs Pot",
+    "plant": {
+        "id": "997822bb-b2f8-43ac-b4cb-2b7f102fa545",
+        "name": "Herbs",
+        "humidity": 40,
+        "soil_moisture": 50,
+        "temperature": 22,
+        "light_levels": 6,
+        "height": "",
+        "leaves_density": null,
+        "notes": null
+    },
+    "location": "South window",
+    "dimensions": [
+        20,
+        20
+    ],
+    "notes": null,
+    "measurements": []
+}

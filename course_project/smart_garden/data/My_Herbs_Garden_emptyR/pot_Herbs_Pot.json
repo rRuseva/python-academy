@@ -1,0 +1,45 @@
+{
+    "pot_id": "6f62bd83-7e2a-46b8-b389-515c9824137e",
+    "pot_name": "Herbs Pot",
+    "plant": {
+        "id": "997822bb-b2f8-43ac-b4cb-2b7f102fa545",
+        "name": "Herbs",
+        "humidity": 40,
+        "soil_moisture": 50,
+        "temperature": 22,
+        "light_levels": 6,
+        "height": "",
+        "leaves_density": null,
+        "notes": null
+    },
+    "location": "South window",
+    "dimensions": [
+        20,
+        20
+    ],
+    "notes": null,
+    "measurements": [
+        [
+            {
+                "sensor_name": "Soil Moisture",
+                "sensor_id": "61d3f349-7fed-4540-b66f-ea9136e0e522",
+                "data_units": "%",
+                "entry": {
+                    "entry_id": 1001,
+                    "value": "33",
+                    "timestamp": "12/12/2021 13:38:48"
+                }
+            },
+            {
+                "sensor_name": "Light intensity",
+                "sensor_id": "d104d2eb-a47e-4035-9cf4-b31a80a03560",
+                "data_units": "luminous intensity",
+                "entry": {
+                    "entry_id": 2001,
+                    "value": "19",
+                    "timestamp": "12/12/2021 13:38:48"
+                }
+            }
+        ]
+    ]
+}

@@ -6,13 +6,23 @@
     "pots": [
         {
             "pot_id": "1dd9b9cf-3429-4ac0-8a6c-d9916f40bf22",
-            "pot_name": "Herbs Pot"
+            "pot_name": "Herbs Pot",
+            "dimensions": [
+                15,
+                15
+            ],
+            "notes": null
         },
         {
             "pot_id": "3766280c-d612-40ce-9756-9b4b0adbf34e",
-            "pot_name": "Cherry tomatoes"
+            "pot_name": "Cherry tomatoes",
+            "dimensions": [
+                50,
+                50
+            ],
+            "notes": null
         }
     ],
-    "dimensions": [],
-    "location": []
+    "dimensions": [200, 200],
+    "location": ["Home"]
 }

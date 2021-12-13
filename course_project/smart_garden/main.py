@@ -62,8 +62,8 @@ if __name__ == '__main1__':
 ###gui app
 if __name__ == '__main__':
     garden_name = "My mini grocery"
-    garden_dirname = os.path.join(config.DATA_PATH, utils.generate_filename(garden_name))
-    garden_filename = os.path.join(garden_dirname, utils.generate_filename(garden_name)+ ".json")
+    garden_dirname = os.path.join(config.DATA_PATH, utils.construct_filename(garden_name))
+    garden_filename = os.path.join(garden_dirname, utils.generate_file_path(garden_name, ""))
 
     # garden_repo = GardenRepository("Home_garden", garden_filename)
     # garden_repo.load_garden_data_from_file(garden_filename)
@@ -72,14 +72,7 @@ if __name__ == '__main__':
     # # print(garden_repo.garden.__repr__())
     # pot = garden_repo.garden.pots[0]
     # sensor = pot.sensors[0]
-    """
-    df = sensor.get_data_frame()
-    ax = plt.gca()
-    df = df[['timestamp','value']]
-    ax.set_title('Soil Moisture')
-    df.plot(kind='line', legend=True, ax=ax, color='r',marker='o', fontsize=10)
-    plt.show()
-    """
+
 
     # app = Application(db_file=garden_filename)
     app = Application()
